@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to PotatoeCraft! Join our Minecraft server at play.potatoecraft.net for endless fun!">
+    <title>PotatoeCraft Minecraft Server</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 5px 0 0;
+        }
+
+        .hero {
+            padding: 50px 20px;
+            background: url('https://via.placeholder.com/1920x1080?text=Minecraft+Server') no-repeat center center/cover;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: #ff9800;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .feature {
+            background: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            max-width: 300px;
+            text-align: left;
+        }
+
+        .feature h3 {
+            margin: 0 0 10px;
+            color: #4caf50;
+        }
+
+        footer {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        #notification {
+            display: none;
+            color: green;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to PotatoeCraft</h1>
+        <p>The tastiest Minecraft server on the internet!</p>
+    </header>
+
+    <section class="hero">
+        <h2>Join Our Server!</h2>
+        <p>IP: <strong>play.potatoecraft.net</strong></p>
+        <button class="btn" id="playNowButton">Play Now</button>
+        <div id="notification">Copied to clipboard!</div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>🎮 Epic Gameplay</h3>
+            <p>Survival, Creative, and Minigames to keep you entertained for hours!</p>
+        </div>
+        <div class="feature">
+            <h3>🌍 Unique Worlds</h3>
+            <p>Explore custom-built worlds that are as beautiful as a potato farm!</p>
+        </div>
+        <div class="feature">
+            <h3>👫 Community</h3>
+            <p>Friendly players and helpful staff make every day a fun adventure.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PotatoeCraft. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('playNowButton').addEventListener('click', function() {
+            const textToCopy = 'play.potatoecraft.net';
+            const input = document.createElement('input');
+            input.value = textToCopy;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+
+            // Show notification
+            const notification = document.getElementById('notification');
+            notification.style.display = 'block';
+
+            // Hide the notification after 2 seconds
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

@@ -6,110 +6,213 @@
     <meta name="description" content="Welcome to PotatoeCraft! Join our Minecraft server at play.potatoecraft.net for endless fun!">
     <title>PotatoeCraft Minecraft Server</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ffeb3b, #ff9800);
-            color: #333;
-            text-align: center;
-        }
+        /* General Body and Layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffeb3b, #ff9800); /* Bright, potato-like colors */
+    color: #333;
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background-color: #4caf50;
-            color: white;
-            padding: 20px 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+/* Navigation Bar */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+    font-size: 18px;
+}
 
-        header p {
-            margin: 5px 0 0;
-        }
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
 
-        .hero {
-            padding: 50px 20px;
-            background: url('https://via.placeholder.com/1920x1080?text=Minecraft+Server') no-repeat center center/cover;
-            color: white;
-        }
+.navbar a:hover {
+    background-color: #4caf50;
+}
 
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px #000;
-        }
+/* Header Section */
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 40px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
 
-        .btn {
-            background-color: #ff9800;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+header p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
 
-        .btn:hover {
-            background-color: #e67e22;
-        }
+/* Hero Section */
+.hero {
+    padding: 80px 20px;
+    background: url('https://via.placeholder.com/1920x1080?text=PotaTOE+Craft') no-repeat center center/cover;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
 
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 40px 20px;
-        }
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
 
-        .feature {
-            background: white;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            flex: 1;
-            max-width: 300px;
-            text-align: left;
-        }
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
 
-        .feature h3 {
-            margin: 0 0 10px;
-            color: #4caf50;
-        }
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-        footer {
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            margin-top: 20px;
-        }
+.btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
 
-        footer p {
-            margin: 5px 0;
-        }
+#notification {
+    display: none;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1.25rem;
+    padding: 12px 24px;
+    border-radius: 30px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInOut 2s forwards;
+}
 
-        footer a {
-            color: #4caf50;
-            text-decoration: none;
-        }
+/* Keyframe for notification fade-in and fade-out */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+/* Feature Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
 
-        #notification {
-            display: none;
-            color: green;
-            font-size: 1.2rem;
-            margin-top: 20px;
+.feature {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature h3 {
+    font-size: 1.75rem;
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.feature::before {
+    content: '🥔'; /* Potato emoji */
+    font-size: 3rem;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Footer */
+footer {
+    padding: 30px 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+    }
+
+    .btn {
+        font-size: 1.25rem;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        max-width: 90%;
+        margin-bottom: 30px;
+    }
+}
+
         }
     </style>
 </head>

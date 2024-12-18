@@ -1,320 +1,320 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to PotaTOECraft! Join our Minecraft server at play.potatoecraft.net for endless fun!">
-    <link rel="icon" type="image/png" href="potaTOE Craft.png">
-    <title>PotatoeCraft Minecraft Server</title>
-    <style>
-        /* General Body and Layout */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #808080, #ff9800); /* Gradient from grey to orange */
-            color: #333;
-            text-align: center;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            background-color: #333;
-            padding: 10px 20px;
-            font-size: 18px;
-            display: flex;
-            justify-content: flex-start;  /* Align items to the left */
-            align-items: center;
-        }
-
-        .navbar a {
-            color: white;
-            padding: 10px 15px;  /* Adjusted padding to make the buttons closer */
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            margin-right: 10px; /* Adds spacing between buttons */
-        }
-
-        .navbar a:hover {
-            background-color: #66bb6a; /* Brighter green */
-        }
-
-        /* Header Section */
-        header {
-            background-color: #ce5910;
-            color: white;
-            padding: 40px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 20px;
-            background-color: #ff9800; /* Solid orange background */
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-        }
-
-        .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            background-color: #4caf50;
-            color: white;
-            padding: 15px 40px;
-            font-size: 1.5rem;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #66bb6a;
-            transform: scale(1.1);
-        }
-
-        #notification {
-            display: none;
-            background-color: #5a68b5; /* Brighter green */
-            color: white;
-            font-size: 1.25rem;
-            padding: 12px 24px;
-            border-radius: 30px;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-            animation: fadeInOut 2s forwards;
-        }
-
-        /* Keyframe for notification fade-in and fade-out */
-        @keyframes fadeInOut {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-
-        /* Feature Section */
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 60px 20px;
-            background-color: #ff9800;
-        }
-
-        .feature {
-            background-color: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            text-align: center;
-            max-width: 300px;
-            width: 100%;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        .feature:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature h3 {
-            font-size: 1.75rem;
-            color: #66bb6a; /* Brighter green */
-            margin-bottom: 15px;
-        }
-
-        .feature p {
-            font-size: 1.1rem;
-            color: #555;
-        }
-
-        .feature::before {
-            content: '🥔'; /* Potato emoji */
-            font-size: 3rem;
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-        }
-
-        /* Feature Button */
-        .feature-button {
-            background-color: transparent;
-            border: none;
-            color: inherit;
-            cursor: pointer;
-            width: 100%;
-            height: 100%;
-            display: block;
-            padding: 30px;
-            text-align: center;
-            font-size: 1.1rem;
-            border-radius: 15px;
-            transition: background-color 0.3s ease;
-        }
-
-        .feature-button:hover {
-            background-color: #f1f1f1;
-        }
-
-        /* Footer */
-        footer {
-            padding: 30px 20px;
-            background-color: #333;
-            color: white;
-            text-align: center;
-        }
-
-        footer p {
-            margin-bottom: 15px;
-        }
-
-        footer a {
-            color: #66bb6a; /* Brighter green */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Media Query for Responsiveness */
-        @media (max-width: 768px) {
-            .navbar {
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to PotaTOECraft! Join our Minecraft server at play.potatoecraft.net for endless fun!">
+        <link rel="icon" type="image/png" href="potaTOE Craft.png">
+        <title>PotatoeCraft Minecraft Server</title>
+        <style>
+            /* General Body and Layout */
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #808080, #ff9800); /* Gradient from grey to orange */
+                color: #333;
                 text-align: center;
-                flex-direction: column;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            /* Navigation Bar */
+            .navbar {
+                background-color: #333;
+                padding: 10px 20px;
+                font-size: 18px;
+                display: flex;
+                justify-content: flex-start;  /* Align items to the left */
+                align-items: center;
+            }
+
+            .navbar a {
+                color: white;
+                padding: 10px 15px;  /* Adjusted padding to make the buttons closer */
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+                margin-right: 10px; /* Adds spacing between buttons */
+            }
+
+            .navbar a:hover {
+                background-color: #66bb6a; /* Brighter green */
+            }
+
+            /* Header Section */
+            header {
+                background-color: #ce5910;
+                color: white;
+                padding: 40px 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            header h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+            }
+
+            header p {
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+            }
+
+            /* Hero Section */
+            .hero {
+                padding: 80px 20px;
+                background-color: #ff9800; /* Solid orange background */
+                color: white;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
             }
 
             .hero h2 {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
+                margin-bottom: 15px;
             }
 
             .hero p {
-                font-size: 1.25rem;
+                font-size: 1.5rem;
+                margin-bottom: 30px;
             }
 
             .btn {
-                font-size: 1.25rem;
+                background-color: #4caf50;
+                color: white;
+                padding: 15px 40px;
+                font-size: 1.5rem;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
             }
 
+            .btn:hover {
+                background-color: #66bb6a;
+                transform: scale(1.1);
+            }
+
+            #notification {
+                display: none;
+                background-color: #5a68b5; /* Brighter green */
+                color: white;
+                font-size: 1.25rem;
+                padding: 12px 24px;
+                border-radius: 30px;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+                animation: fadeInOut 2s forwards;
+            }
+
+            /* Keyframe for notification fade-in and fade-out */
+            @keyframes fadeInOut {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+
+            /* Feature Section */
             .features {
-                flex-direction: column;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                padding: 60px 20px;
+                background-color: #ff9800;
             }
 
             .feature {
-                max-width: 90%;
-                margin-bottom: 30px;
+                background-color: #fff;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                text-align: center;
+                max-width: 300px;
+                width: 100%;
+                transition: transform 0.3s ease;
+                position: relative;
             }
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-    </div>
 
-    <header>
-        <h1>Welcome to PotatoeCraft</h1>
-        <p>The tastiest Minecraft server on the internet!</p>
-    </header>
+            .feature:hover {
+                transform: translateY(-10px);
+            }
 
-    <section class="hero">
-        <h2>Join Our Server!</h2>
-        <p>Server: <strong>play.potatoecraft.net</strong></p>
-        <button class="btn" id="playNowButton">Play Now</button>
-        <div id="notification">Copied to clipboard!</div>
-    </section>
+            .feature h3 {
+                font-size: 1.75rem;
+                color: #66bb6a; /* Brighter green */
+                margin-bottom: 15px;
+            }
 
-    <section class="features">
-        <div class="feature">
-            <button class="feature-button" onclick="window.open('https://www.spigotmc.org/resources/chestshop.51856/', '_blank')">
-                <h3>ChestShop</h3>
-                <p>Build your own shop and trade with other players.</p>
-            </button>
+            .feature p {
+                font-size: 1.1rem;
+                color: #555;
+            }
+
+            .feature::before {
+                content: '🥔'; /* Potato emoji */
+                font-size: 3rem;
+                position: absolute;
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: -1;
+            }
+
+            /* Feature Button */
+            .feature-button {
+                background-color: transparent;
+                border: none;
+                color: inherit;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                display: block;
+                padding: 30px;
+                text-align: center;
+                font-size: 1.1rem;
+                border-radius: 15px;
+                transition: background-color 0.3s ease;
+            }
+
+            .feature-button:hover {
+                background-color: #f1f1f1;
+            }
+
+            /* Footer */
+            footer {
+                padding: 30px 20px;
+                background-color: #333;
+                color: white;
+                text-align: center;
+            }
+
+            footer p {
+                margin-bottom: 15px;
+            }
+
+            footer a {
+                color: #66bb6a; /* Brighter green */
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            /* Media Query for Responsiveness */
+            @media (max-width: 768px) {
+                .navbar {
+                    text-align: center;
+                    flex-direction: column;
+                }
+
+                .hero h2 {
+                    font-size: 2.5rem;
+                }
+
+                .hero p {
+                    font-size: 1.25rem;
+                }
+
+                .btn {
+                    font-size: 1.25rem;
+                }
+
+                .features {
+                    flex-direction: column;
+                }
+
+                .feature {
+                    max-width: 90%;
+                    margin-bottom: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
         </div>
-        <div class="feature">
-            <button class="feature-button" onclick="window.open('https://modrinth.com/plugin/coreprotect', '_blank')">
-                <h3>CoreProtect</h3>
-                <p>Keep track of changes to the world and easily roll back griefing.</p>
-            </button>
-        </div>
-        <div class="feature">
-            <button class="feature-button" onclick="window.open('https://essentialsx.net', '_blank')">
-                <h3>EssentialsX</h3>
-                <p>The ultimate plugin for smooth server management and player commands. Also adds money to game!</p>
-            </button>
-        </div>
-        <div class="feature">
-            <button class="feature-button" onclick="window.open('https://essentialsx.net/wiki/Module-Breakdown.html#essentialsx-discord', '_blank')">
-                <h3>EssentialsX<br>Discord</h3>
-                <p>Adds a discord bot so The server status is always displayed!</p>
-            </button>
-        </div>
-        <div class="feature">
-            <button class="feature-button" onclick="window.open('https://luckperms.net', '_blank')">
-                <h3>LuckPerms</h3>
-                <p>Manage permissions to ensure fair play and safety for all.</p>
-            </button>
-        </div>
-    </section>
-    
-    </section>
 
-    <footer>
-        <p>&copy; 2024 PotatoeCraft. All rights reserved.</p>
-    </footer>
+        <header>
+            <h1>Welcome to PotatoeCraft</h1>
+            <p>The tastiest Minecraft server on the internet!</p>
+        </header>
 
-    <script>
-        document.getElementById('playNowButton').addEventListener('click', function() {
-            const textToCopy = 'play.potatoecraft.net';
-            const input = document.createElement('input');
-            input.value = textToCopy;
-            document.body.appendChild(input);
-            input.select();
-            document.execCommand('copy');
-            document.body.removeChild(input);
+        <section class="hero">
+            <h2>Join Our Server!</h2>
+            <p>Server: <strong>play.potatoecraft.net</strong></p>
+            <button class="btn" id="playNowButton">Play Now</button>
+            <div id="notification">Copied to clipboard!</div>
+        </section>
 
-            // Show notification
-            const notification = document.getElementById('notification');
-            notification.style.display = 'block';
+        <section class="features">
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://www.spigotmc.org/resources/chestshop.51856/', '_blank')">
+                    <h3>💰<br>ChestShop</h3>
+                    <p>Build your own shop and trade with other players.</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://modrinth.com/plugin/coreprotect', '_blank')">
+                    <h3>🛡️<br>CoreProtect</h3>
+                    <p>Keep track of changes to the world and easily roll back griefing.</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://essentialsx.net', '_blank')">
+                    <h3>❌<br>EssentialsX</h3>
+                    <p>The ultimate plugin for smooth server management and player commands. Also adds money to game!</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://essentialsx.net/wiki/Module-Breakdown.html#essentialsx-discord', '_blank')">
+                    <h3>💬<br>EssentialsX<br>Chat</h3>
+                    <p>Adds a discord bot so The server status is always displayed!</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://luckperms.net', '_blank')">
+                    <h3>☘️<br>LuckPerms</h3>
+                    <p>Manage permissions to ensure fair play and safety for all.</p>
+                </button>
+            </div>
+        </section>
+        
+        </section>
 
-            // Hide the notification after 2 seconds
-            setTimeout(function() {
-                notification.style.display = 'none';
-            }, 2000);
-        });
-    </script>
-</body>
-</html>
+        <footer>
+            <p>&copy; 2024 PotatoeCraft. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document.getElementById('playNowButton').addEventListener('click', function() {
+                const textToCopy = 'play.potatoecraft.net';
+                const input = document.createElement('input');
+                input.value = textToCopy;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+
+                // Show notification
+                const notification = document.getElementById('notification');
+                notification.style.display = 'block';
+
+                // Hide the notification after 2 seconds
+                setTimeout(function() {
+                    notification.style.display = 'none';
+                }, 2000);
+            });
+        </script>
+    </body>
+    </html>

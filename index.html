@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to PotaTOECraft! Join our Minecraft server at play.potatoecraft.net for endless fun!">
+    <link rel="icon" type="image/png" href="potaTOE Craft.png">
     <title>PotatoeCraft Minecraft Server</title>
     <style>
         /* General Body and Layout */
@@ -26,16 +27,19 @@
         /* Navigation Bar */
         .navbar {
             background-color: #333;
-            padding: 15px 0;
+            padding: 10px 20px;
             font-size: 18px;
+            display: flex;
+            justify-content: flex-start;  /* Align items to the left */
+            align-items: center;
         }
 
         .navbar a {
             color: white;
-            padding: 14px 20px;
+            padding: 10px 15px;  /* Adjusted padding to make the buttons closer */
             text-decoration: none;
-            display: inline-block;
             transition: background-color 0.3s ease;
+            margin-right: 10px; /* Adds spacing between buttons */
         }
 
         .navbar a:hover {
@@ -44,7 +48,7 @@
 
         /* Header Section */
         header {
-            background-color: #66bb6a; /* Brighter green */
+            background-color: #ce5910;
             color: white;
             padding: 40px 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -96,7 +100,7 @@
 
         #notification {
             display: none;
-            background-color: #66bb6a; /* Brighter green */
+            background-color: #5a68b5; /* Brighter green */
             color: white;
             font-size: 1.25rem;
             padding: 12px 24px;
@@ -123,7 +127,7 @@
             justify-content: center;
             gap: 30px;
             padding: 60px 20px;
-            background-color: #f8f8f8;
+            background-color: #ff9800;
         }
 
         .feature {
@@ -209,6 +213,7 @@
         @media (max-width: 768px) {
             .navbar {
                 text-align: center;
+                flex-direction: column;
             }
 
             .hero h2 {
@@ -235,6 +240,11 @@
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </div>
+
     <header>
         <h1>Welcome to PotatoeCraft</h1>
         <p>The tastiest Minecraft server on the internet!</p>
@@ -263,19 +273,7 @@
         <div class="feature">
             <button class="feature-button" onclick="window.open('https://essentialsx.net', '_blank')">
                 <h3>EssentialsX</h3>
-                <p>The ultimate plugin for smooth server management and player commands. Also adds money to game!</p>
-            </button>
-        </div>
-        <div class="feature">
-            <button class="feature-button" onclick="window.open('https://essentialsx.net/wiki/Module-Breakdown.html#essentialsx-discord', '_blank')">
-                <h3>EssentialsX<br>Discord</h3>
-                <p>Adds a discord bot so The server status is always displayed!</p>
-            </button>
-        </div>
-        <div class="feature">
-            <button class="feature-button" onclick="window.open('https://luckperms.net', '_blank')">
-                <h3>LuckPerms</h3>
-                <p>Manage permissions to ensure fair play and safety for all.</p>
+                <p>The ultimate plugin for smooth server management and player commands.</p>
             </button>
         </div>
     </section>

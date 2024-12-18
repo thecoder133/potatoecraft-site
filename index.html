@@ -39,12 +39,12 @@
         }
 
         .navbar a:hover {
-            background-color: #4caf50;
+            background-color: #66bb6a; /* Brighter green */
         }
 
         /* Header Section */
         header {
-            background-color: #4caf50;
+            background-color: #66bb6a; /* Brighter green */
             color: white;
             padding: 40px 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -90,13 +90,13 @@
         }
 
         .btn:hover {
-            background-color: #e67e22;
+            background-color: #66bb6a;
             transform: scale(1.1);
         }
 
         #notification {
             display: none;
-            background-color: #4caf50;
+            background-color: #66bb6a; /* Brighter green */
             color: white;
             font-size: 1.25rem;
             padding: 12px 24px;
@@ -144,7 +144,7 @@
 
         .feature h3 {
             font-size: 1.75rem;
-            color: #4caf50;
+            color: #66bb6a; /* Brighter green */
             margin-bottom: 15px;
         }
 
@@ -163,6 +163,26 @@
             z-index: -1;
         }
 
+        /* Feature Button */
+        .feature-button {
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding: 30px;
+            text-align: center;
+            font-size: 1.1rem;
+            border-radius: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .feature-button:hover {
+            background-color: #f1f1f1;
+        }
+
         /* Footer */
         footer {
             padding: 30px 20px;
@@ -176,7 +196,7 @@
         }
 
         footer a {
-            color: #4caf50;
+            color: #66bb6a; /* Brighter green */
             text-decoration: none;
             font-weight: bold;
         }
@@ -229,30 +249,37 @@
 
     <section class="features">
         <div class="feature">
-            <h3>ChestShop</h3>
-            <p>Build your own shop and trade with other players.</p>
+            <button class="feature-button" onclick="window.open('https://www.spigotmc.org/resources/chestshop.51856/', '_blank')">
+                <h3>ChestShop</h3>
+                <p>Build your own shop and trade with other players.</p>
+            </button>
         </div>
         <div class="feature">
-            <h3>CoreProtect</h3>
-            <p>Keep track of changes to the world and easily roll back griefing.</p>
+            <button class="feature-button" onclick="window.open('https://modrinth.com/plugin/coreprotect', '_blank')">
+                <h3>CoreProtect</h3>
+                <p>Keep track of changes to the world and easily roll back griefing.</p>
+            </button>
         </div>
         <div class="feature">
-            <h3>⚙️ EssentialsX</h3>
-            <p>The ultimate plugin for smooth server management and player commands. Also adds money to game!</p>
+            <button class="feature-button" onclick="window.open('https://essentialsx.net', '_blank')">
+                <h3>EssentialsX</h3>
+                <p>The ultimate plugin for smooth server management and player commands. Also adds money to game!</p>
+            </button>
         </div>
         <div class="feature">
-            <h3>EssentialsXDiscord</h3>
-            <p>Adds a discord bot so The server status is always displayed!</p>
+            <button class="feature-button" onclick="window.open('https://essentialsx.net/wiki/Module-Breakdown.html#essentialsx-discord', '_blank')">
+                <h3>EssentialsX<br>Discord</h3>
+                <p>Adds a discord bot so The server status is always displayed!</p>
+            </button>
         </div>
         <div class="feature">
-            <h3>LuckPerms</h3>
-            <p>Manage permissions to ensure fair play and safety for all.</p>
-        </div>
-        <div class="feature">
-            <h3>PotaTOE Craft</h3>
-            <p>Overall, a place to have fun!</p>
+            <button class="feature-button" onclick="window.open('https://luckperms.net', '_blank')">
+                <h3>LuckPerms</h3>
+                <p>Manage permissions to ensure fair play and safety for all.</p>
+            </button>
         </div>
     </section>
+
     <footer>
         <p>&copy; 2024 PotatoeCraft. All rights reserved.</p>
     </footer>
@@ -272,7 +299,7 @@
             notification.style.display = 'block';
 
             // Hide the notification after 2 seconds
-            setTimeout(() => {
+            setTimeout(function() {
                 notification.style.display = 'none';
             }, 2000);
         });

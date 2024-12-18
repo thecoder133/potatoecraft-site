@@ -1,2 +1,3 @@
 RewriteEngine On
 RewriteRule ^about$ about/about.html [L]
+RewriteRUle ^about-for-kids$ about-for-kids/about-for-kids.html [L]

@@ -2,4 +2,4 @@ RewriteEngine On
 RewriteRule ^about$ about/index.html [L]
 RewriteRule ^about-for-kid$ about-for-kid/index.html [L]
 RewriteRule ^plugins$ plugins/index.html [L]
-RewriteRule ^map$ http://play.potatoecraft.net:25654/#world:20907568:53:-19476246:225:0:0:0:1:flat [R=301,L]
+Redirect 301 /map http://play.potatoecraft.net:25654

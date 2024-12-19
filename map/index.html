@@ -13,14 +13,30 @@
             color: #333;
             font-size: 16px;
         }
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #444;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <p>If the map doesn't load, the server might be offline.</p>
+    <div id="timer">5</div>
     <script>
-        setTimeout(function() {
-            window.location.href = "http://play.potatoecraft.net:25654";
-        }, 5000);
+        let timeLeft = 5;
+        const timerElement = document.getElementById('timer');
+        
+        const countdown = setInterval(function() {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = "http://play.potatoecraft.net:25654";
+            }
+        }, 1000);
     </script>
 </body>
 </html>

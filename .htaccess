@@ -1,5 +1,6 @@
+Options +FollowSymLinks
 RewriteEngine On
 RewriteRule ^about$ about/index.html [L]
 RewriteRule ^about-for-kid$ about-for-kid/index.html [L]
 RewriteRule ^plugins$ plugins/index.html [L]
-Redirect 301 /map http://play.potatoecraft.net:25654
+RewriteRule ^map$ http://play.potatoecraft.net:25654 [R=301,L]

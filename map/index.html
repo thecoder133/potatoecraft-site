@@ -1,37 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Server Map</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        #offline-message {
-            display: none;
-            color: red;
-            font-size: 18px;
-        }
-    </style>
+    <meta http-equiv="refresh" content="0; url=http://play.potatoecraft.net:25654">
 </head>
 <body>
-    <div id="offline-message">The server is currently offline.</div>
     <script>
-        function checkServer() {
-            fetch('http://play.potatoecraft.net:25654', {
-                mode: 'no-cors'
-            })
-            .then(() => {
-                window.location.href = 'http://play.potatoecraft.net:25654';
-            })
-            .catch(() => {
-                document.getElementById('offline-message').style.display = 'block';
-            });
-        }
-        checkServer();
+        window.location.href = "http://play.potatoecraft.net:25654";
     </script>
-    <p>Checking server status...</p>
+    <p>Redirecting to map...</p>
 </body>
 </html>

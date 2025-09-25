@@ -23,16 +23,16 @@
 .deadcell {
     border: 1px solid #cceeff;
     border-collapse: collapse;
-    width: 4px;
-    height: 4px;
+    width: 15px;
+    height: 15px;
     background-color: #e6f7ff;
 }
 
 .alivecell {
     border: 1px solid #cceeff;
     border-collapse: collapse;
-    width: 4px;
-    height: 4px;
+    width: 15px;
+    height: 15px;
     background-color: #006699;
 }
 

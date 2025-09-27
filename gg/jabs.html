@@ -13,7 +13,7 @@
         justify-content: center;
         min-height: 100vh;
         color: #fff;
-        font-family: "Comic Sans MS", sans-serif;
+        font-family: "Comic Sans MS", cursive, sans-serif;
         text-align: center;
         overflow: hidden;
       }
@@ -56,7 +56,7 @@
         cursor: pointer;
         box-shadow: 0 0 15px rgba(255, 200, 0, 0.7);
         margin-top: 10px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       }
 
       button:hover {
@@ -64,47 +64,103 @@
         box-shadow: 0 0 25px rgba(255, 200, 0, 1);
       }
 
-      .mayo {
-        position: absolute;
-        pointer-events: none;
-        top: -100px;
-        width: 80px;
-        height: 80px;
-        background-image: url('/images/mayo.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        animation: fall linear forwards;
+      #autoPraise {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #ff0000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        cursor: pointer;
+        color: #fff;
+        font-size: 14px;
+        box-shadow: 0 0 10px #ff0000;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        z-index: 999;
       }
 
+      #autoPraise.active {
+        background-color: #00ff00;
+        box-shadow: 0 0 15px #00ff00;
+      }
+
+      .mayo {
+  position: absolute;
+  top: -100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: fall linear forwards;
+  pointer-events: none; /* THIS MAKES THEM CLICK-THROUGH */
+}
+
+
       @keyframes fall {
-        0% {
-          transform: translateY(0) rotate(0deg);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(110vh) rotate(360deg);
-          opacity: 0;
-        }
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
       }
     </style>
   </head>
   <body>
-    <img src="/images/Jabs.png" alt="JABS" height=500 width=500>
+    <img src="/images/Jabs.png" alt="JABS">
     <h1>JABS IS KING HE WILL EAT YOUR MAYOANAISE PRAISE HIM OR ELSE</h1>
     <button onclick="summonMayo()">PRAISE HIM</button>
 
+    <!-- Auto Praise Toggle -->
+    <div id="autoPraise">⚡</div>
+
     <script>
-      function summonMayo() {
-        for (let i = 0; i < 50; i++) { // 🔥 MORE MAYO PER CLICK
+      const mayoImages = [
+        '/images/mayo.png',
+        '/images/mayo2.png',
+        '/images/mayo3.png'
+      ];
+
+      function summonMayo(count = 50) {
+        for (let i = 0; i < count; i++) {
           const mayo = document.createElement('div');
           mayo.classList.add('mayo');
+
+          // Random left position
           mayo.style.left = Math.random() * (window.innerWidth - 80) + 'px';
-          mayo.style.animationDuration = (2 + Math.random() * 2) + 's';
+
+          // Random image
+          mayo.style.backgroundImage = `url('${mayoImages[Math.floor(Math.random() * mayoImages.length)]}')`;
+
+          // Random size
+          const size = 40 + Math.random() * 80; // 40px to 120px
+          mayo.style.width = `${size}px`;
+          mayo.style.height = `${size}px`;
+
+          // Random animation speed
+          mayo.style.animationDuration = (2 + Math.random() * 3) + 's';
+
           document.body.appendChild(mayo);
-          
-          setTimeout(() => mayo.remove(), 4000);
+
+          // Remove after animation
+          setTimeout(() => mayo.remove(), 5000);
         }
       }
+
+      // Auto Praise
+      const autoPraiseBtn = document.getElementById('autoPraise');
+      let autoPraise = false;
+      let autoInterval;
+
+      autoPraiseBtn.addEventListener('click', () => {
+        autoPraise = !autoPraise;
+        autoPraiseBtn.classList.toggle('active', autoPraise);
+
+        if (autoPraise) {
+          autoInterval = setInterval(() => summonMayo(20), 1000); // 20 jars every second
+        } else {
+          clearInterval(autoInterval);
+        }
+      });
     </script>
   </body>
 </html>

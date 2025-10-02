@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERGGJ70SFJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -10,30 +10,30 @@
 
       gtag('config', 'G-ERGGJ70SFJ');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:description" content="Welcome to PotaTOECraft! Join our Minecraft server for endless fun!">
-    <link rel="icon" type="image/png" href="/images/Favicon.png">
-    <title>About Us For Kids - PotaTOECraft</title>
-    <style>
-        /* General Body and Layout */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #808080, #ff9800); /* Gradient from grey to orange */
-            color: #333;
-            text-align: center;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to PotaTOECraft! Join our Minecraft server at play.potatoecraft.net for endless fun!">
+        <link rel="icon" type="image/png" href="images/Favicon.png">
+        <title>PotaTOECraft</title>
+        <style>
+            /* General Body and Layout */
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #808080, #ff9800); /* Gradient from grey to orange */
+                color: #333;
+                text-align: center;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        /* Navigation Bar */
+            /* Navigation Bar */
         .navbar {
             background-color: #ce5819;
             padding: 15px 20px;
@@ -57,118 +57,287 @@
             background-color: #66bb6a; /* Brighter green */
         }
 
-        /* Header Section */
-        header {
-            background-color: #ce5910;
-            color: white;
-            padding: 40px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+            /* Header Section */
+            header {
+                background-color: #ce5910;
+                color: white;
+                padding: 40px 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+            header h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+            }
 
-        header p {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-        }
+            header p {
+                font-size: 1.25rem;
+                margin-bottom: 20px;
+            }
 
-        /* About Section */
-        .about {
-            padding: 60px 20px;
-            background-color: #ff9800;
-            color: white;
-            line-height: 1.6;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-        }
+            /* Hero Section */
+            .hero {
+                padding: 80px 20px;
+                background-color: #ff9800; /* Solid orange background */
+                color: white;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+            }
 
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
+            .hero h2 {
+                font-size: 3.5rem;
+                margin-bottom: 15px;
+            }
 
-        .about p {
-            font-size: 1.25rem;
-            margin-bottom: 30px;
-        }
+            .hero p {
+                font-size: 1.5rem;
+                margin-bottom: 30px;
+            }
 
-        /* Footer */
-        footer {
-            padding: 30px 20px;
-            background-color: #333;
-            color: white;
-            text-align: center;
-        }
+            .btn {
+                background-color: #4caf50;
+                color: white;
+                padding: 15px 40px;
+                font-size: 1.5rem;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
 
-        footer p {
-            margin-bottom: 15px;
-        }
+            .btn:hover {
+                background-color: #66bb6a;
+                transform: scale(1.1);
+            }
+            .btn:active {
+                transform: scale(0.95); /* Slightly smaller when clicked */
+            }
 
-        footer a {
-            color: #66bb6a; /* Brighter green */
-            text-decoration: none;
-            font-weight: bold;
-        }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/about-for-kid">About For Kids</a>
-        <a href="/map">Live Map</a>
-    </div>
+            #notification {
+                display: none;
+                background-color: #5a68b5; /* Brighter green */
+                color: white;
+                font-size: 1.25rem;
+                padding: 12px 24px;
+                border-radius: 30px;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+                animation: fadeInOut 2s forwards;
+            }
 
-    <header>
-        <h1>About PotaTOECraft</h1>
-        <p>The tastiest Minecraft server on the internet!</p>
-    </header>
+            /* Keyframe for notification fade-in and fade-out */
+            @keyframes fadeInOut {
+                0% { opacity: 0; }
+                50% { opacity: 1; }
+                100% { opacity: 0; }
+            }
 
-    <section class="about">
-        <h2>Welcome to PotaTOE Craft</h2>
-        <p>
-            Hi there, gamer pals! 👋 I'm Ben, an 11-year-old who loves Minecraft, technology, and making super fun stuff online.<br>
-            I created PotaTOE Craft because I wanted a Minecraft server where kids like us can play, build, and explore safely! 🌟
-        </p>
+            /* Feature Section */
+            .features {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                padding: 60px 20px;
+                background-color: #ff9800;
+            }
 
-        <h3>🥔 What Makes PotaTOE Craft Special?</h3>
-        <p>
-            PotaTOE Craft is the tastiest Minecraft server ever! Here's why:<br>
+            .feature {
+                background-color: #fff;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+                text-align: center;
+                max-width: 300px;
+                width: 100%;
+                transition: transform 0.3s ease;
+                position: relative;
+            }
 
-            Kid-Friendly Fun: No mean players, no drama—just fun with friends! 🛡️<br>
+            .feature:hover {
+                transform: translateY(-10px);
+            }
 
-            Safe and Secure: My dad works in cybersecurity, so we know how to keep things safe for everyone.<br>
+            .feature h3 {
+                font-size: 1.75rem;
+                color: #66bb6a; /* Brighter green */
+                margin-bottom: 15px;
+            }
 
-            Cool Plugins: We’ve got special tools that make the game even more awesome. 🚀<br>
+            .feature p {
+                font-size: 1.1rem;
+                color: #555;
+            }
 
-            To make this possible, we’ve carefully selected plugins that enhance gameplay while keeping the server secure and easy to use.
-        </p>
+            .feature::before {
+                content: '🥔'; /* Potato emoji */
+                font-size: 3rem;
+                position: absolute;
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: -1;
+            }
 
-        <h3>💡 What Can You Do Here?</h3>
-        <p>
-            • Build the house (or castle!) of your dreams. 🏰<br>
-            • Go on adventures with your friends. 🌍<br>
-            • Trade, craft, and explore like a pro. 💎
-        </p>
+            /* Feature Button */
+            .feature-button {
+                background-color: transparent;
+                border: none;
+                color: inherit;
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                display: block;
+                padding: 30px;
+                text-align: center;
+                font-size: 1.1rem;
+                border-radius: 15px;
+                transition: background-color 0.3s ease;
+            }
 
-        <h3>🌟 Join Us Today!</h3>
-        <p>
-            PotaTOE Craft is the perfect place to play, create, and have fun with other kids. <br>
-             So grab your pickaxe, and let’s get started! 🎉 <br>
+            .feature-button:hover {
+                background-color: #f1f1f1;
+            }
 
-            See you in the game,
-            Ben 🥔
-        </p>
-    </section>
+            /* Footer */
+            footer {
+                padding: 30px 20px;
+                background-color: #333;
+                color: white;
+                text-align: center;
+            }
 
-    <footer>
-        <p>&copy; 2024 PotatoeCraft. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+            footer p {
+                margin-bottom: 15px;
+            }
+
+            footer a {
+                color: #66bb6a; /* Brighter green */
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            /* Media Query for Responsiveness */
+            @media (max-width: 768px) {
+                .navbar {
+                    text-align: center;
+                    flex-direction: column;
+                }
+
+                .hero h2 {
+                    font-size: 2.5rem;
+                }
+
+                .hero p {
+                    font-size: 1.25rem;
+                }
+
+                .btn {
+                    font-size: 1.25rem;
+                }
+
+                .features {
+                    flex-direction: column;
+                }
+
+                .feature {
+                    max-width: 90%;
+                    margin-bottom: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/about-for-kid">About For Kids</a>
+            <a href="/map">Live Map</a>
+        </div>
+
+        <header>
+            <h1>Welcome to PotaTOECraft</h1>
+            <p>The tastiest Minecraft server on the internet!</p>
+        </header>
+
+        <section class="hero">
+            <h2>Join Our Server!</h2>
+            <p>Server: <strong>play.potatoecraft.net</strong></p>
+            <button class="btn" id="playNowButton">Play Now</button>
+            <div id="notification">Copied to clipboard!</div>
+        </section>
+        <h2 style="background-color: #ce5910; color: white; padding: 20px; margin: 0; text-align: center; font-size: 2.5rem;">Our Plugins</h2>
+        <section class="features">
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://www.spigotmc.org/resources/chestshop.51856/field?field=documentation', '_blank')">
+                    <h3>💰<br>ChestShop</h3>
+                    <p>Build your own shop and trade with other players.</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://modrinth.com/plugin/coreprotect', '_blank')">
+                    <h3>🛡️<br>CoreProtect</h3>
+                    <p>Keep track of changes to the world and easily roll back griefing.</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://essentialsx.net', '_blank')">
+                    <h3>❌<br>EssentialsX</h3>
+                    <p>The ultimate plugin for smooth server management and player commands. Also adds money to game!</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://essentialsx.net/wiki/Module-Breakdown.html#essentialsx-chat', '_blank')">
+                    <h3>💬<br>EssentialsX<br>Chat</h3>
+                    <p>Handles chat management to ensure safety and fun for all players!</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.open('https://luckperms.net', '_blank')">
+                    <h3>☘️<br>LuckPerms</h3>
+                    <p>Manage permissions to ensure fair play and safety for all.</p>
+                </button>
+            </div>
+            <div class="feature">
+                <button class="feature-button" onclick="window.location.href = '/plugins'">
+                    <h3>And More...</h3>
+                    <p>Click for a full list.</p>
+                </button>
+            </div>
+        </section>
+        
+        </section>
+
+        <footer>
+            <p>&copy; 2024 PotatoeCraft. All rights reserved.</p>
+        </footer>
+
+        <script>
+            document.getElementById('playNowButton').addEventListener('click', function() {
+                const textToCopy = 'play.potatoecraft.net';
+                const input = document.createElement('input');
+                input.value = textToCopy;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+
+                // Show notification
+                const notification = document.getElementById('notification');
+                notification.style.display = 'block';
+
+                // Hide the notification after 2 seconds
+                setTimeout(function() {
+                    notification.style.display = 'none';
+                }, 2000);
+            });
+        </script>
+    </body>
+    </html>

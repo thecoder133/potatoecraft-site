@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Desmos</title>
+    <link rel="stylesheet" href="/gg/index.css">
+    <link rel="icon" type="image/x-icon" href="/images/Jabs.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div id="background"></div>
+    <p>Sponsored by GSI</p>
+    <p>Choose a game/site to play:</p>
+    
+
+    <nav class="game-links">
+      <a href="Helios.html">Helios Browser</a>
+      <a href="drive-mad.html">Drive Mad</a>
+      <a href="jabs.html">Jabs</a>
+      <a href="clash-clone.html">Clash Royale Clone</a>
+      <a href="csgoclicker.html">CSGO Clicker</a>
+      <a href="ragdollhit.html">Ragdoll Hit</a>
+      <a href="Escape-Road.html">Escape Road</a>
+      <a href="ragdoll-archers.html">Ragdoll Archers</a>
+      <a href="/gg/retro-bowl/index.html">Retro Bowl</a>
+      <a href="/gg/dadish/index.html">Dadish</a>
+      <a href="/gg/dadish-2/index.html">Dadish 2</a>
+      <a href="/gg/dadish-3/index.html">Dadish 3</a>
+      <a href="/gg/ampler-launcher/index.html">Minecraft</a>
+      <a href="crazy-cattle.html">Crazy Cattle</a>
+      <a href="/gg/flappy-bird/index.html">Flappy Bird</a>
+      <a href="/gg/idle-breakout/index.html">Idle Breakout</a>
+      <a href="/gg/cookie-clicker/index.html">Cookie Clicker</a>
+      <a href="/gg/burritobison/index.html">Burrito Bison! SPECIAL THANKS TO JACOB!</a>
+      <a href="/gg/cut-the-rope/index.html">Cut The Rope</a>
+      <a href="chromedino.html">TRex Game</a>
+      <a href="/gg/drive-mad-s/index.html">Drive Mad S</a>
+      <a href="paper-io2.html">Paper.IO 2</a>
+      <a href="subway-surfers.html">Subway Surfers</a>
+      <a href="/gg/2048/index.html">2048</a>
+      <a href="https://www.geo-fs.com">Geo FS</a>
+      <a href="monkey-mart.html">Monkey Mart</a>
+      <a href="/gg/sandboxels/index.html">Sandboxels</a>
+      <a href="bitlife.html">BitLife</a>
+      <a href="gol.html">Conway’s Game Of Life</a>
+      <a href="drift-boss.html">Drift Boss</a>	
+      <a href="/gg/retrobowlcollege/index.html">Retro Bowl College</a>
+    </nav>
+
+    <h1>
+      <a href="https://forms.gle/9wUFys1UfBd6SnTD8" target="_blank"
+        >SUBMIT GAME IDEAS HERE WILL TRY TO ADD</a
+  >
+    </h1>
+    <script>
+      // Generate stars dynamically
+      const numStars = 2300;
+      const background = document.getElementById('background');
+
+      for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        const size = Math.random() * 3;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.left = `${Math.random() * 100}vw`;
+        star.style.top = `${Math.random() * 100}vh`;
+
+        // Randomize animation delay for natural look
+        star.style.animationDelay = `${Math.random() * 5}s`;
+
+        background.appendChild(star);
+      }
+    </script>
+  </body>
+</html>
